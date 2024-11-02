@@ -1,11 +1,9 @@
 import joblib
 import streamlit as st
 import pandas as pd
-
-# Load the trained model
 model = joblib.load("multi_output_rf_model.pkl")
 
-# Map for encoding building types and decoding failure types
+
 type_mapping = {"L": 0, "M": 1, "H": 2}
 failure_type_mapping = {
     0: "🔥 Heat Dissipation Failure",
@@ -17,12 +15,12 @@ failure_type_mapping = {
 }
 
 def predict_failure(input_data):
-    # Make predictions for both failure occurrence and type
+    
     prediction = model.predict(input_data)
-    failure_occurrence = prediction[0][0]  # First output: Failure occurrence (Yes/No)
-    failure_type = prediction[0][1]        # Second output: Failure type
+    failure_occurrence = prediction[0][0]  
+    failure_type = prediction[0][1]        
 
-    # Interpret results
+    
     if failure_occurrence == 1:
         occurrence_result = f"**Yes**, failure type: {failure_type_mapping.get(failure_type, 'Unknown Failure Type')}"
     else:

@@ -1,0 +1,5 @@
+streamlit
+joblib
+pandas
+numpy
+# Add any other dependencies you need

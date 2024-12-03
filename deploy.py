@@ -41,7 +41,7 @@ def main():
         </style>
         """, unsafe_allow_html=True)
 
-    st.title("🏢 Machine Failure Prediction 🔍")
+    st.title("⚠️ Machine Failure Prediction 🛠️")
 
    
     building_type = st.selectbox("🏗️ Machine Quality", ["L", "M", "H"])

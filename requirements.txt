@@ -2,6 +2,6 @@ streamlit
 joblib
 pandas
 numpy
-sklearn
+scikit-learn
 tensorflow
 # Add any other dependencies you need

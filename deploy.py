@@ -41,10 +41,10 @@ def main():
         </style>
         """, unsafe_allow_html=True)
 
-    st.title("🏢 Building Failure Prediction 🔍")
+    st.title("🏢 Machine Failure Prediction 🔍")
 
    
-    building_type = st.selectbox("🏗️ Building Type", ["L", "M", "H"])
+    building_type = st.selectbox("🏗️ Machine Quality", ["L", "M", "H"])
     air_temperature = st.number_input("🌡️ Air Temperature [K]", min_value=250.0, max_value=350.0, value=298.1)
     process_temperature = st.number_input("🌡️ Process Temperature [K]", min_value=250.0, max_value=400.0, value=308.6)
     rotational_speed = st.number_input("🔄 Rotational Speed [rpm]", min_value=0, max_value=5000, value=1551)

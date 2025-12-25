@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 
 # Load XGBoost model
-model = joblib.load(r"C:\Users\ankur\Downloads\machine_failure.pkl")
+model = joblib.load("machine_failure.pkl")
 
 # Ordinal encoding
 type_mapping = {"L": 0, "M": 1, "H": 2}
@@ -69,3 +69,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
